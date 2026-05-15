@@ -1,0 +1,17 @@
+{
+  "name": "@ljcamargo/quirkvis-cli",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "bin": {
+    "qasmvis-js": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm --minify --clean --shims",
+    "dev": "tsup src/index.ts --format esm --watch"
+  },
+  "dependencies": {
+    "@ljcamargo/quirkvis-core": "workspace:*",
+    "commander": "^12.0.0"
+  }
+}

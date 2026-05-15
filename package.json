@@ -1,0 +1,29 @@
+{
+  "name": "jsqirkvis",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "latest",
+    "autoprefixer": "^10.5.0",
+    "postcss": "^8.5.14",
+    "tailwindcss": "^4.3.0",
+    "tsup": "^8.5.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "workspaces": [
+    "packages/*",
+    "sample"
+  ],
+  "scripts": {
+    "build": "bun run build:core && bun run build:react && bun run build:cli",
+    "build:core": "cd packages/core && bun run build",
+    "build:react": "cd packages/react && bun run build",
+    "build:cli": "cd packages/cli && bun run build",
+    "sample": "cd sample && bun run dev"
+  },
+  "dependencies": {
+    "qasm-ts": "^2.1.4"
+  }
+}

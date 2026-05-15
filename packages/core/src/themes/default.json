@@ -1,0 +1,160 @@
+{
+    "name": "default",
+    "dimensions": {
+        "gate_width": 40,
+        "gate_height": 40,
+        "gate_spacing": 20,
+        "line_spacing": 60,
+        "padding": 40,
+        "label_offset": 50,
+        "barrier_padding": 20,
+        "reverse_qubit_order": false,
+        "reverse_classical_order": false
+    },
+    "styles": {
+        "background": "#fafafa",
+        "text": "#555555",
+        "label_font": {
+            "family": "calibri",
+            "size": 17
+        },
+        "qubit_wire": {
+            "style": "straight",
+            "stroke": "#777777",
+            "stroke_width": 3,
+            "dasharray": ""
+        },
+        "connection_line": {
+            "style": "wave",
+            "stroke": "#555555",
+            "stroke_width": 2,
+            "amplitude": 3,
+            "wavelength": 12
+        },
+        "measurement_line": {
+            "style": "straight",
+            "stroke": "#777777",
+            "stroke_width": 2,
+            "dasharray": "2,2"
+        },
+        "barrier": {
+            "style": "straight",
+            "stroke": "#999999",
+            "stroke_width": 3,
+            "dasharray": "4,4"
+        }
+    },
+    "shapes": {
+        "gate": {
+            "type": "circle",
+            "radius": 20,
+            "fill": "#d4b6e8",
+            "stroke": "#777777",
+            "stroke_width": 2
+        },
+        "control_dot": {
+            "type": "circle",
+            "radius": 4,
+            "fill": "#555555",
+            "stroke": "none"
+        },
+        "target_plus": {
+            "type": "plus_circle",
+            "radius": 12,
+            "fill": "#fafafa",
+            "stroke": "#555555",
+            "stroke_width": 2
+        },
+        "measurement": {
+            "type": "diamond",
+            "radius": 18,
+            "fill": "#A0A0A0",
+            "stroke": "#444444",
+            "stroke_width": 1
+        },
+        "swap_x": {
+            "type": "cross",
+            "size": 8,
+            "stroke": "#222222",
+            "stroke_width": 2
+        }
+    },
+    "gates": {
+        "h": {
+            "fill": "#e8b5ca",
+            "label": "H"
+        },
+        "x": {
+            "fill": "#ffe0e0",
+            "label": "X"
+        },
+        "y": {
+            "fill": "#e0ffe0",
+            "label": "Y"
+        },
+        "z": {
+            "fill": "#ccccff",
+            "label": "Z"
+        },
+        "rx": {
+            "parametric_mode": "arc",
+            "arc_stroke": "#ff6666",
+            "arc_stroke_width": 4,
+            "arc_radius": 17,
+            "label": "Rx",
+            "fill": "#ffe0e0"
+        },
+        "ry": {
+            "parametric_mode": "arc",
+            "arc_stroke": "#5eba5e",
+            "arc_stroke_width": 4,
+            "arc_radius": 17,
+            "label": "Ry",
+            "fill": "#e0ffe0"
+        },
+        "rz": {
+            "parametric_mode": "arc",
+            "arc_stroke": "#5757fa",
+            "arc_stroke_width": 4,
+            "arc_radius": 17,
+            "label": "Rz",
+            "fill": "#ccccff"
+        },
+        "sdg": {
+            "fill": "#e8dfb5",
+            "label": "S†"
+        },
+        "s": {
+            "fill": "#b5e8c0",
+            "label": "S"
+        },
+        "tdg": {
+            "fill": "#b5e5e8",
+            "label": "T†"
+        },
+        "t": {
+            "fill": "#beb5e8",
+            "label": "T"
+        },
+        "p": {
+            "parametric_mode": "arc",
+            "arc_stroke": "#f1fa8c",
+            "arc_stroke_width": 3,
+            "arc_radius": 18,
+            "label": "P",
+            "fill": "#fdfdfb"
+        },
+        "measurement": {
+            "type": "diamond",
+            "fill": "#AFAFAF",
+            "label": "M"
+        },
+        "cx": {
+            "target_shape": "target_plus"
+        },
+        "ccx": {
+            "target_shape": "target_plus"
+        }
+    },
+    "substitutions": {}
+}

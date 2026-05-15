@@ -1,0 +1,32 @@
+{
+  "name": "@ljcamargo/quirkvis-react",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --minify --clean --external react",
+    "dev": "tsup src/index.ts --format cjs,esm --watch --dts --external react"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3"
+  },
+  "peerDependencies": {
+    "typescript": "^6.0.3"
+  },
+  "dependencies": {
+    "@ljcamargo/quirkvis-core": "workspace:*",
+    "react": "^19.2.6",
+    "react-dom": "^19.2.6"
+  }
+}

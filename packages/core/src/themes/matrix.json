@@ -1,0 +1,160 @@
+{
+    "name": "matrix",
+    "dimensions": {
+        "gate_width": 40,
+        "gate_height": 40,
+        "gate_spacing": 20,
+        "line_spacing": 60,
+        "padding": 40,
+        "label_offset": 50,
+        "barrier_padding": 20,
+        "reverse_qubit_order": false,
+        "reverse_classical_order": false
+    },
+    "styles": {
+        "background": "#010b01",
+        "text": "#00ff41",
+        "label_font": {
+            "family": "Courier New",
+            "size": 17
+        },
+        "qubit_wire": {
+            "style": "straight",
+            "stroke": "#00531a",
+            "stroke_width": 3,
+            "dasharray": "2,1"
+        },
+        "connection_line": {
+            "style": "wave",
+            "stroke": "#00b330",
+            "stroke_width": 2,
+            "amplitude": 3,
+            "wavelength": 12
+        },
+        "measurement_line": {
+            "style": "straight",
+            "stroke": "#006620",
+            "stroke_width": 2,
+            "dasharray": "2,2"
+        },
+        "barrier": {
+            "style": "straight",
+            "stroke": "#007a25",
+            "stroke_width": 3,
+            "dasharray": "4,4"
+        }
+    },
+    "shapes": {
+        "gate": {
+            "type": "circle",
+            "radius": 20,
+            "fill": "#020f02",
+            "stroke": "#00cc33",
+            "stroke_width": 2
+        },
+        "control_dot": {
+            "type": "circle",
+            "radius": 4,
+            "fill": "#00ff41",
+            "stroke": "none"
+        },
+        "target_plus": {
+            "type": "plus_circle",
+            "radius": 12,
+            "fill": "#010b01",
+            "stroke": "#00ff41",
+            "stroke_width": 2
+        },
+        "measurement": {
+            "type": "diamond",
+            "radius": 18,
+            "fill": "#031203",
+            "stroke": "#00cc33",
+            "stroke_width": 1
+        },
+        "swap_x": {
+            "type": "cross",
+            "size": 8,
+            "stroke": "#00ff41",
+            "stroke_width": 2
+        }
+    },
+    "gates": {
+        "h": {
+            "fill": "#021a08",
+            "label": "H"
+        },
+        "x": {
+            "fill": "#021a08",
+            "label": "X"
+        },
+        "y": {
+            "fill": "#021a08",
+            "label": "Y"
+        },
+        "z": {
+            "fill": "#021a08",
+            "label": "Z"
+        },
+        "rx": {
+            "parametric_mode": "arc",
+            "arc_stroke": "#00ff41",
+            "arc_stroke_width": 4,
+            "arc_radius": 17,
+            "label": "Rx",
+            "fill": "#021a08"
+        },
+        "ry": {
+            "parametric_mode": "arc",
+            "arc_stroke": "#39ff14",
+            "arc_stroke_width": 4,
+            "arc_radius": 17,
+            "label": "Ry",
+            "fill": "#021a08"
+        },
+        "rz": {
+            "parametric_mode": "arc",
+            "arc_stroke": "#00e676",
+            "arc_stroke_width": 4,
+            "arc_radius": 17,
+            "label": "Rz",
+            "fill": "#021a08"
+        },
+        "sdg": {
+            "fill": "#021a08",
+            "label": "S†"
+        },
+        "s": {
+            "fill": "#021a08",
+            "label": "S"
+        },
+        "tdg": {
+            "fill": "#021a08",
+            "label": "T†"
+        },
+        "t": {
+            "fill": "#021a08",
+            "label": "T"
+        },
+        "p": {
+            "parametric_mode": "arc",
+            "arc_stroke": "#ccff00",
+            "arc_stroke_width": 3,
+            "arc_radius": 18,
+            "label": "P",
+            "fill": "#021a08"
+        },
+        "measurement": {
+            "type": "diamond",
+            "fill": "#031203",
+            "label": "M"
+        },
+        "cx": {
+            "target_shape": "target_plus"
+        },
+        "ccx": {
+            "target_shape": "target_plus"
+        }
+    },
+    "substitutions": {}
+}
