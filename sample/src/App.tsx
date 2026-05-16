@@ -24,8 +24,6 @@ measure q[0];
 function App() {
   const [qasm, setQasm] = useState(defaultQasm);
   const [themeName, setThemeName] = useState<keyof typeof themes>('default');
-  const [fit, setFit] = useState(true);
-  const [zoom, setZoom] = useState(1);
 
   return (
     <div className="min-h-screen bg-gray-100 p-4 lg:p-8">

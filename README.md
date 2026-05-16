@@ -21,8 +21,14 @@ This is a JavaScript/TypeScript reimplementation of the [quantum_quirkvis](https
 
 ### Installation
 
+For React projects:
 ```bash
-npm install @ljcamargo/quirkvis-core @ljcamargo/quirkvis-react
+npm install @ljcamargo/quirkvis-react
+```
+
+For Node.js or core usage:
+```bash
+npm install @ljcamargo/quirkvis-core
 ```
 
 ### Usage in React
