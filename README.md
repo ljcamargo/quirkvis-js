@@ -33,11 +33,13 @@ npm install @ljcamargo/quirkvis-core
 
 ### Usage in React
 
+### Usage in React
+
 ```tsx
 import { QuirkVis } from '@ljcamargo/quirkvis-react';
 import { themes } from '@ljcamargo/quirkvis-core';
 
-const qasm = `
+const qasmString = `
 OPENQASM 3.0;
 include "stdgates.inc";
 qubit[2] q;
@@ -48,13 +50,27 @@ cx q[0], q[1];
 function App() {
   return (
     <QuirkVis 
-      qasm={qasm} 
+      qasm={qasmString} 
       theme={themes.default} 
-      fit={true} 
+      fitWidth={true}   // Scale to fit container width
+      fitHeight={false}  // Scale to fit container height
+      zoom={1.0}        // Manual scale (ignored if fitWidth/Height is true)
     />
   );
 }
 ```
+
+#### QuirkVis Props
+
+| Prop | Type | Default | Description |
+| :--- | :--- | :--- | :--- |
+| `qasm` | `string` | **Required** | The OpenQASM 3.0 source code. |
+| `theme` | `Theme` | **Required** | A theme object (e.g., from `themes`). |
+| `fitWidth` | `boolean` | `false` | Scale the circuit to fit the container width. |
+| `fitHeight` | `boolean` | `false` | Scale the circuit to fit the container height. |
+| `zoom` | `number` | `1` | Zoom multiplier (only used if `fitWidth` AND `fitHeight` are `false`). |
+| `className`| `string` | `undefined` | CSS class for the wrapper div. |
+| `style` | `CSSProperties` | `undefined` | Inline styles for the wrapper div. |
 
 ### Usage in Node.js
 
