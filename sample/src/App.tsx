@@ -24,22 +24,24 @@ measure q[0];
 function App() {
   const [qasm, setQasm] = useState(defaultQasm);
   const [themeName, setThemeName] = useState<keyof typeof themes>('default');
+  const [fit, setFit] = useState(true);
+  const [zoom, setZoom] = useState(1);
 
   return (
     <div className="min-h-screen bg-gray-100 p-4 lg:p-8">
       <div className="max-w-full mx-auto space-y-8">
         <header className="flex flex-col xl:flex-row justify-between items-center gap-6">
           <h1 className="text-3xl font-bold text-gray-800 shrink-0">QuirkVis JS Demo</h1>
-          
+
           <div className="flex flex-wrap justify-center items-center gap-4">
             <div className="flex items-center gap-2 bg-white p-2 rounded border border-gray-300 shadow-sm">
                 <span className="text-sm font-medium text-gray-600">Zoom: {Math.round(zoom * 100)}%</span>
-                <input 
-                    type="range" 
-                    min="0.1" 
-                    max="3" 
-                    step="0.1" 
-                    value={zoom} 
+                <input
+                    type="range"
+                    min="0.1"
+                    max="3"
+                    step="0.1"
+                    value={zoom}
                     disabled={fit}
                     onChange={(e) => setZoom(parseFloat(e.target.value))}
                     className="w-32 h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer disabled:opacity-50"
@@ -77,7 +79,7 @@ function App() {
           <div className="space-y-4">
             <div className="flex justify-between items-center">
                 <h2 className="text-xl font-semibold text-gray-700">QASM Input</h2>
-                <button 
+                <button
                     onClick={() => setQasm(defaultQasm)}
                     className="text-sm text-blue-600 hover:underline"
                 >
@@ -95,12 +97,13 @@ function App() {
           <div className="space-y-4">
             <h2 className="text-xl font-semibold text-gray-700">Circuit Output</h2>
             <div className="bg-white border border-gray-300 rounded shadow-sm overflow-auto h-[550px] flex items-start relative">
-              <QuirkVis 
-                qasm={qasm} 
-                theme={themes[themeName] as any} 
-                fit={fit} 
+              <QuirkVis
+                qasm={qasm}
+                theme={themes[themeName] as any}
+                fitWidth={fit}
+                fitHeight={fit}
                 zoom={zoom}
-                className={fit ? 'w-full' : ''} 
+                className={fit ? 'w-full' : ''}
               />
             </div>
           </div>

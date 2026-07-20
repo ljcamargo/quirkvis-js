@@ -241,14 +241,14 @@ export class SVGRenderer {
     const arcStrokeWidth = config.arc_stroke_width || 4;
     const arcStroke = config.arc_stroke || '#ff0000';
     const radius = config.arc_radius || (baseRadius - (config.stroke_width || 1) - arcStrokeWidth / 2 - 1);
-    
+
     let angle = 0;
     if (typeof theta === 'number') angle = theta;
     else if (typeof theta === 'string') {
         if (theta.includes('pi')) angle = Math.PI * (parseFloat(theta.replace('pi', '')) || 1);
         else angle = parseFloat(theta);
     }
-    
+
     if (isNaN(angle)) angle = 0;
 
     const startAngle = -Math.PI / 2;

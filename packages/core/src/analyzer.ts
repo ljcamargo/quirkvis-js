@@ -27,7 +27,7 @@ export class CircuitAnalyzer {
     // Basic cleanup
     const cleanedQasm = qasm.trim();
     const ast = parseString(cleanedQasm, 3, true) as any[];
-    
+
     this.registers.clear();
     const rawStatements: any[] = [];
 
@@ -50,7 +50,7 @@ export class CircuitAnalyzer {
     // Assign line numbers (Match Python's _compute_line_nums)
     let currentLine = 0;
     const sortedRegs = Array.from(this.registers.values());
-    
+
     // Qubits first
     for (const reg of sortedRegs.filter(r => r.type === 'qubit')) {
         for (let i = 0; i < reg.size; i++) {
