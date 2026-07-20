@@ -118,7 +118,16 @@ out
 # Nuxt.js build / generate output
 
 .nuxt
-# dist
+
+# Build output (dist folders in packages)
+dist
+
+# Agent / AI tooling
+.codegraph/
+.pi/
+
+# NPM token (contains auth secrets)
+.npmrc
 
 # Gatsby files
 
