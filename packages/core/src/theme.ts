@@ -25,9 +25,31 @@ export interface Theme {
     measurement_line: LineStyle;
     barrier: LineStyle;
   };
+  interaction?: InteractionConfig;
   shapes: Record<string, ShapeConfig>;
   gates: Record<string, Partial<ShapeConfig> & { label?: string; target_shape?: string }>;
   substitutions: Record<string, string>;
+}
+
+export interface InteractionConfig {
+  moment_highlight?: {
+    fill: string;
+    cursor?: string;
+  };
+  gate_highlight?: {
+    stroke?: string | null;
+    stroke_width?: number;
+    brightness?: number;
+    cursor?: string;
+  };
+  barrier_highlight?: {
+    stroke?: string;
+    stroke_width?: number;
+  };
+  wire_highlight?: {
+    stroke?: string | null;
+    stroke_width?: number;
+  };
 }
 
 export interface LineStyle {
@@ -102,6 +124,10 @@ export class ThemeManager {
 
   getSubstitution(gateName: string): string | undefined {
     return this.theme.substitutions[gateName];
+  }
+
+  getInteraction(): InteractionConfig | undefined {
+    return this.theme.interaction;
   }
 
   getTheme(): Theme {

@@ -156,5 +156,23 @@
             "target_shape": "target_plus"
         }
     },
+    "interaction": {
+        "moment_highlight": {
+            "fill": "rgba(255,255,255,0.08)",
+            "cursor": "pointer"
+        },
+        "gate_highlight": {
+            "stroke_width": 2.5,
+            "brightness": 1.2,
+            "cursor": "pointer"
+        },
+        "barrier_highlight": {
+            "stroke": "#8888bb",
+            "stroke_width": 4
+        },
+        "wire_highlight": {
+            "stroke_width": 4
+        }
+    },
     "substitutions": {}
 }

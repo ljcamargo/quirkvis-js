@@ -169,5 +169,23 @@
             "target_shape": "target_plus"
         }
     },
+    "interaction": {
+        "moment_highlight": {
+            "fill": "rgba(0,0,0,0.06)",
+            "cursor": "pointer"
+        },
+        "gate_highlight": {
+            "stroke_width": 2.5,
+            "brightness": 1.12,
+            "cursor": "pointer"
+        },
+        "barrier_highlight": {
+            "stroke": "#555555",
+            "stroke_width": 4
+        },
+        "wire_highlight": {
+            "stroke_width": 4
+        }
+    },
     "substitutions": {}
 }
